@@ -1,0 +1,165 @@
+@use "../../styles/abstracts/colors" as colors;
+@use "../../styles/abstracts/typography" as typography;
+@use "../../styles/abstracts/functions"  as media;
+
+.gallery__list__wrap {
+  margin-bottom: 118px;
+
+  .layout {
+    @include media.tablet {
+      padding: 0 37px;
+
+    }
+  }
+}
+
+.gallery__list {
+  margin-bottom: 120px;
+
+  @include media.tablet {
+    display: grid;
+    grid-template-columns: minmax(287px, 1fr) 14% minmax(284px, 1fr);
+    //grid-template-rows: 280px;
+    //grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+    grid-auto-rows: 400px;
+    margin-bottom: 0;
+  }
+
+  @include media.desktop {
+    max-width: 1110px;
+    margin: auto;
+    grid-template-columns: minmax(313px, 1fr) 14% minmax(313px, 1fr);
+    gap: 30px;
+  }
+
+
+}
+
+.gallery__item__heading {
+  @include typography.headingS;
+  color: var(--color2);
+  margin-bottom: 21px;
+
+  @include media.desktop {
+    @include typography.headingM;
+  }
+}
+
+.gallery__item {
+  @include media.tablet {
+    height: 100%;
+  }
+
+  &:nth-child(5n + 1) {
+    @include media.tablet {
+      grid-column: 2 / 4;
+
+    }
+  }
+
+  &:nth-child(5n + 2) {
+    @include media.tablet {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  &:nth-child(5n + 3) {
+    @include media.tablet {
+      grid-column: 1 / 3;
+      grid-row: span 2;
+    }
+  }
+
+  &:nth-child(5n + 4) {
+    @include media.tablet {
+      grid-column: 3;
+    }
+  }
+
+  &:nth-child(5n + 5) {
+    @include media.tablet {
+      grid-row: 3;
+      grid-column: 3;
+    }
+  }
+
+  picture {
+    @include media.tablet {
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include media.desktop {
+      height: 100%;
+      width: 100%;
+    }
+
+
+  }
+}
+
+  .gallery__item__description {
+    @include typography.bodyS;
+    color: var(--color3);
+
+    @include media.desktop {
+      @include typography.bodyM;
+    }
+  }
+
+
+  .gallery__item_text {
+    //padding: 48px 24px;
+    margin-bottom: 31px;
+
+    @include media.tablet {
+      padding: 36px 57px 20px 1px;
+    }
+
+    &.black {
+      background: colors.$color2;
+
+
+      @include media.tablet {
+        padding: 86px 45px 20px 31px;
+      }
+
+      .gallery__item__heading,
+      .gallery__item__description {
+        color: colors.$color4;
+      }
+    }
+  }
+
+  .item__inner {
+    padding: 49px 24px;
+  }
+
+  .gallery__item__heading {
+    @include media.tablet {
+      margin-bottom: 26px;
+    }
+  }
+
+  .gallery__item_pic {
+    margin-bottom: 15px;
+
+    @include media.tablet {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      margin-bottom: 25px;
+
+      @include media.tablet {
+        margin-bottom: 0;
+      }
+    }
+  }

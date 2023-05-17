@@ -1,0 +1,70 @@
+
+
+@mixin headingXL {
+  font-family: "Big Shoulders Display";
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 88px;
+  text-transform: uppercase;
+}
+
+@mixin headingXL {
+  font-family: "Big Shoulders Display";
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+@mixin headingL {
+  font-family: "Big Shoulders Display";
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+@mixin headingM {
+  font-family: "Big Shoulders Display";
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+@mixin headingS {
+  font-family: "Big Shoulders Display";
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 45px;
+  text-transform: uppercase;
+}
+
+@mixin headingXS {
+  font-family: "Big Shoulders Display";
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+@mixin bodyM {
+  font-family: "Outfit";
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+@mixin bodyS {
+  font-family: "Outfit";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@mixin bodyXS {
+  font-family: "Outfit";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+}

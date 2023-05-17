@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes, useLocation } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import promoStyles from "./components/promo/promo.module.scss";
+import React from "react";
+import Location from "./components/Location";
+import Footer from "./components/footer/Footer";
 
 function App() {
+  const location = useLocation();
+  const path = location.pathname;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="location" element={<Location />} />
+      </Routes>
+      {path === "/location" ? (
+        <Footer path={"location"} />
+      ) : (
+        <Footer path={"home"} />
+      )}
     </div>
   );
 }

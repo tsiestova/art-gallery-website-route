@@ -1,0 +1,138 @@
+@use "../../styles/abstracts/colors" as colors;
+@use "../../styles/abstracts/typography" as typography;
+@use "../../styles/abstracts/functions"  as media;
+
+.footer {
+  background: colors.$color2;
+  padding: 48px 0 48px 0;
+
+ @include media.tablet {
+    padding-top: 55px;
+  }
+
+  &.locationMode {
+    background: #D5966C;
+
+    .footer__description {
+      color: #151515;
+    }
+
+    .social__media__item {
+      a {
+        &:before {
+          background: #151515;
+        }
+        &:hover {
+          &:before {
+            background: white;
+            cursor: pointer;
+          }
+        }
+        }
+      }
+  }
+
+  .layout {
+    padding: 0 32px;
+
+   @include media.tablet {
+      display: flex;
+      padding: 0 39px;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 70px;
+    }
+  }
+
+}
+
+.logo__wrap {
+  width: 110px;
+  height: 40px;
+  margin-bottom: 38px;
+
+ @include media.tablet {
+    width: 110px;
+    height: auto;
+    flex: 0.5;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.footer__description {
+  @include typography.bodyXS;
+  color:  colors.$color4;
+  margin-bottom: 38px;
+
+ @include media.tablet {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 281px;
+    flex: 1.5;
+  }
+}
+
+//social-media
+
+.social__media__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+ @include media.tablet {
+    flex: 0.7;
+    justify-content: end;
+  }
+}
+
+.social__media__item {
+  width: 20px;
+  height: 20px;
+
+  a {
+    &:before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: white;
+    }
+
+    &:hover {
+      &:before {
+        background:  colors.$color1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.social__media__item_facebook {
+    a {
+      &:before {
+        mask: url(../../assets/icon-facebook.svg) no-repeat;
+      }
+    }
+  }
+
+  &.social__media__item_twitter {
+    a {
+      &:before {
+        mask: url(../../assets/icon-twitter.svg) no-repeat;
+      }
+    }
+  }
+
+  &.social__media__item_insta {
+    a {
+      &:before {
+        mask: url(../../assets/icon-instagram.svg) no-repeat;
+      }
+    }
+  }
+}

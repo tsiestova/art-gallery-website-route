@@ -1,0 +1,22 @@
+@use "../styles/abstracts/functions" as media;
+@use "../styles/abstracts/typography" as typography;
+
+
+.location__section__wrap {
+
+}
+
+.layout {
+  max-width: 1110px;
+  margin: auto;
+}
+
+.location__section {
+  background: #151515;
+}
+
+.heading {
+  @include typography.headingL;
+  color: #FFFFFF;
+
+}

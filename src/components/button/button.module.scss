@@ -1,0 +1,86 @@
+@use "../../styles/abstracts/colors" as colors;
+@use "../../styles/abstracts/functions" as media;
+
+.btn {
+  font-family: "Big Shoulders Display";
+  display: block;
+  height: 72px;
+  padding: 0 38px;
+  /* max-width: 260px; */
+  /* width: 100%; */
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 3.63636px;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  line-height: 72px;
+  background: #151515;
+  position: relative;
+
+  &.iconRight {
+    //&:hover {
+    //  @include media.tablet {
+    //    background-color: colors.$color1;
+    //  }
+    //}
+
+    &:after {
+      content: "";
+      width: 56px;
+      height: 72px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background:  colors.$color1 url(../../assets/icon-arrow-right.svg) no-repeat center center;
+    }
+    //
+    //&:hover {
+    //  &:before {
+    //    background-color: colors.$color1;
+    //  }
+    //}
+    //&:hover {
+    //  &:before {
+    //    background-color: colors.$color1;
+    //  }
+    //}
+  }
+
+  &.iconLeft {
+    &:after {
+      content: "";
+      width: 56px;
+      height: 72px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background:  colors.$color1 url(../../assets/icon-arrow-left.svg) no-repeat center center;
+    }
+  }
+  }
+
+
+@mixin btn-back($bg) {
+  &:before {
+    content: "";
+    width: 56px;
+    height: 72px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $bg url(../../assets/icon-arrow-left.svg) no-repeat center center;
+  }
+}
+
+@mixin btn-next($bg) {
+  &:before {
+    content: "";
+    width: 56px;
+    height: 72px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: $bg url(./assets/icon-arrow-right.svg) no-repeat center center;
+  }
+}
