@@ -5,16 +5,26 @@ import { Link } from "react-router-dom";
 import HomePage from "./HomePage";
 import Button from "./button/Button";
 import locationStyles from "./location.module.scss";
+import Icon from "./button/Icon"
+import IconRight from "./button/icon-arrow-left.svg"
+
 
 const Location = () => {
+
   return (
     <div className={locationStyles.location__page__wrap}>
       <div className={locationStyles.layout}>
         <Link to="/">
           {HomePage}
-          <Button iconLeft>
-            <span>BACK TO HOME</span>
+
+          <Button type="button"
+                  iconLeft={ <Icon>
+                    <img src={IconRight} alt="" />
+                  </Icon>}
+          >
+            BACK TO HOME
           </Button>
+
         </Link>
       </div>
       <div className={locationStyles.location__section__wrap}>

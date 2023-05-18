@@ -2,21 +2,32 @@
 @use "../../styles/abstracts/functions" as media;
 
 .btn {
-  font-family: "Big Shoulders Display";
-  display: block;
-  height: 72px;
-  padding: 0 38px;
+
+  display: flex;
+  align-items: center;
   /* max-width: 260px; */
   /* width: 100%; */
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 3.63636px;
-  color: #ffffff;
   position: relative;
-  text-decoration: none;
-  line-height: 72px;
-  background: #151515;
-  position: relative;
+  height: 72px;
+
+  &.back {
+    flex-direction: row-reverse;
+  }
+
+
+  .btn__text {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 3.63636px;
+    color: #ffffff;
+    height: 100%;
+    padding: 0 38px;
+    text-decoration: none;
+    line-height: 72px;
+    background: #151515;
+    font-family: "Big Shoulders Display";
+    display: block;
+  }
 
   &.iconRight {
     //&:hover {
@@ -28,10 +39,10 @@
     &:after {
       content: "";
       width: 56px;
-      height: 72px;
-      position: absolute;
-      right: 0;
-      top: 0;
+      height: 100%;
+      //position: absolute;
+      //right: 0;
+      //top: 0;
       background:  colors.$color1 url(../../assets/icon-arrow-right.svg) no-repeat center center;
     }
     //

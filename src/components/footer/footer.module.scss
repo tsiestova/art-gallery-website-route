@@ -32,6 +32,8 @@
       }
   }
 
+
+
   .layout {
     padding: 0 32px;
 
@@ -40,7 +42,12 @@
       padding: 0 39px;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 70px;
+      //gap: 70px;
+    }
+
+    @include media.desktop {
+      max-width: 1183px;
+      margin: auto;
     }
   }
 
@@ -54,7 +61,12 @@
  @include media.tablet {
     width: 110px;
     height: auto;
-    flex: 0.5;
+    //flex: 0.5;
+  }
+
+  @include media.desktop {
+    width: 160px;
+    height: 58px;
   }
 
   img {
@@ -74,7 +86,11 @@
     font-size: 16px;
     line-height: 26px;
     max-width: 281px;
-    flex: 1.5;
+    //flex: 1.5;
+  }
+
+  @include media.desktop {
+    max-width: 388px;
   }
 }
 
@@ -86,7 +102,7 @@
   gap: 20px;
 
  @include media.tablet {
-    flex: 0.7;
+    //flex: 0.7;
     justify-content: end;
   }
 }

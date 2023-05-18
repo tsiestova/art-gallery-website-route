@@ -6,7 +6,7 @@ import ResponsivePicture from "../picture/ResponsivePicture";
 const GalleryList = () => {
   return (
     <div className={galleryStyles.gallery__list__wrap}>
-      <div className={layoutStyles.layout}>
+      <div className={galleryStyles.layout}>
         <ul className={galleryStyles.gallery__list}>
           <li
             className={`${galleryStyles.gallery__item_pic} ${galleryStyles.gallery__item}`}
@@ -19,14 +19,15 @@ const GalleryList = () => {
           <li
             className={`${galleryStyles.gallery__item_text} ${galleryStyles.gallery__item}`}
           >
-            <div className={galleryStyles.gallery__item__heading}>
+            <div className={galleryStyles.item__inner}>
+              <div className={galleryStyles.gallery__item__heading}>
               Your Day <br /> at the Gallery
             </div>
-            <div className={galleryStyles.gallery__item__description}>
-              Wander through our distinct collections and find new insights
-              about our artists. Dive into the details of their creative
-              process.
-            </div>
+              <div className={galleryStyles.gallery__item__description}>
+                Wander through our distinct collections and find new insights
+                about our artists. Dive into the details of their creative
+                process.
+              </div></div>
           </li>
           <li
             className={`${galleryStyles.gallery__item} ${galleryStyles.gallery__item_pic}`}

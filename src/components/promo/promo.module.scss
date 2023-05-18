@@ -1,6 +1,21 @@
 @use "../../styles/abstracts/functions" as media;
 @use "../../styles/abstracts/typography" as typography;
 
+.promo__wrap {
+  position: relative;
+
+  &:before {
+    @include media.desktop {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      max-width: 50%;
+      background: black;
+    }
+  }
+}
+
 .promo {
   margin-bottom: 120px;
   position: relative;
@@ -14,6 +29,12 @@
   @include media.desktop {
     min-height: 800px;
     height: 100%;
+    max-width: 1110px;
+    display: flex;
+    //align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto auto 180px;
   }
 
   .pic__wrap {
@@ -24,14 +45,7 @@
     }
   }
 
-  &:before {
-    @include media.desktop {
-      content: "";
-      background: black;
-      display: block;
-      width: 100%;
-    }
-  }
+
 }
 
 .top__container {
@@ -44,6 +58,8 @@
 
   @include media.desktop {
     padding: 190px 0 0 0;
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -55,7 +71,21 @@
 //  //  }
 //  //}
 //
-  .logo__wrap {
+
+.logo__wrap__white_dark {
+  display: none;
+
+  @include media.desktop {
+    display: block;
+    position: absolute;
+    left: -290px;
+    top: 26%;
+
+  }
+}
+
+
+  .logo__wrap__dark {
     margin-bottom: 32px;
     height: 110px;
     width: 100%;
@@ -66,19 +96,20 @@
     }
 
     @include media.desktop {
-      position: absolute;
-      width: 514px;
-      z-index: 2;
-      top: 0;
-      bottom: 0;
-      margin: auto 678px auto;
+      //position: absolute;
+      //width: 514px;
+      //z-index: 2;
+      //top: 0;
+      //bottom: 0;
+      //margin: auto 678px auto;
+      display: none;
     }
 
     img {
       object-position: left;
     }
 
-    //&:before {
+    //&:before {f
     //  @include media.desktop {
     //    content: "";
     //    background: url(./assets/logo-light.svg) no-repeat;
@@ -124,6 +155,12 @@
 .btn__wrap {
   display: block;
   margin: auto;
+}
+
+.text__block__wrap {
+  @include media.desktop {
+    max-width: 350px;
+  }
 }
 
 .promo__description {

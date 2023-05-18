@@ -7,20 +7,19 @@ import Location from "./components/Location";
 import Footer from "./components/footer/Footer";
 
 function App() {
-  const location = useLocation();
-  const path = location.pathname;
+ const location = useLocation();
+ const path = location.pathname;
 
-  return (
+    return (
     <div className="App">
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="location" element={<Location />} />
       </Routes>
-      {path === "/location" ? (
-        <Footer path={"location"} />
-      ) : (
-        <Footer path={"home"} />
-      )}
+        {path === "/location" ?
+            <Footer path={"location"} />
+            :  <Footer path={"home"} />
+        }
     </div>
   );
 }

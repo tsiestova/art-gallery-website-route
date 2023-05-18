@@ -3,7 +3,7 @@ import Promo from "./promo/Promo";
 import GalleryList from "./gallery/GalleryList";
 import Footer from "./footer/Footer";
 
-const HomePage = () => {
+const HomePage = ({path}) => {
   return (
     <div>
       <Promo />

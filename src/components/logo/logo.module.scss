@@ -5,6 +5,10 @@
   height: 100%;
   display: block;
   position: relative;
+  
+  @include media.desktop {
+    //display: none;
+  }
 
 
   img {
