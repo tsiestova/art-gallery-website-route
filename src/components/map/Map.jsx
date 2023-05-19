@@ -14,7 +14,7 @@ const Map = () => {
         map.setView([41.48169209345018, -71.31036492647061], 15);
 
         window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 15,
+            maxZoom: 19,
             minZoom: 1,
             'center': [0, 0],
             attribution: 'red',
@@ -26,7 +26,6 @@ const Map = () => {
             "color": "orange",
             "opacity": 0.65
         };
-
 
 
 

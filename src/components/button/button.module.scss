@@ -1,6 +1,14 @@
 @use "../../styles/abstracts/colors" as colors;
 @use "../../styles/abstracts/functions" as media;
 
+
+
+.btn {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .btn {
 
   display: flex;
