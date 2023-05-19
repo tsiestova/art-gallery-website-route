@@ -1,0 +1,22 @@
+
+@use "../../styles/abstracts/typography" as typography;
+
+.map__wrap {
+  height: 550px;
+  //background: grey;
+  z-index: -1;
+
+}
+
+#map {
+  background-color: #e0e0e0;
+  height: 100%;
+}
+
+.heading {
+  @include typography.bodyS;
+}
+
+//.leaflet-tile {
+//  filter: hue-rotate(45deg) !important;
+//}

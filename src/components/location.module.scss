@@ -3,20 +3,55 @@
 
 
 .location__section__wrap {
+  padding: 48px 0 56px;
+  background: #151515;
+}
+
+.location__section {
+
 
 }
 
 .layout {
-  max-width: 1110px;
-  margin: auto;
-}
+  padding: 0 16px;
 
-.location__section {
-  background: #151515;
+  @include media.tablet {
+    display: flex;
+    gap: 68px;
+  }
+
+  @include media.desktop {
+    max-width: 1110px;
+    margin: auto;
+    gap: 220px;
+  }
 }
 
 .heading {
-  @include typography.headingL;
+  @include typography.headingS;
   color: #FFFFFF;
+  margin-bottom: 46px;
+}
 
+.address {
+  @include typography.headingXS;
+  color: #D5966C;
+  margin-bottom: 20px;
+}
+
+.address__description {
+  color: #FFFFFF;
+  @include typography.bodyS;
+  margin-bottom: 20px;
+
+  span {
+    display: block;
+  }
+}
+
+.btn__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }

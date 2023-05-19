@@ -78,9 +78,17 @@
   @include media.desktop {
     display: block;
     position: absolute;
-    left: -290px;
     top: 26%;
+  }
 
+  @media only screen and (min-width: 900px) {
+    height: 117px;
+    left: -191px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: 176px;
+    left: -288px;
   }
 }
 
