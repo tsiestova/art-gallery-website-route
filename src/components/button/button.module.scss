@@ -9,6 +9,12 @@
   }
 }
 
+a {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .btn {
 
   display: flex;
