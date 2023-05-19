@@ -18,21 +18,7 @@ const Map = () => {
             minZoom: 1,
             'center': [0, 0],
             attribution: 'red',
-            style: myStyle
         }).addTo(map);
-
-
-        var myStyle = {
-            "color": "orange",
-            "opacity": 0.65
-        };
-
-
-
-        // var marker = window.L.marker([41.48169209345018, -71.31036492647061], {
-        //     draggable: true,
-        //     title: "MODERN ART GALLERY"
-        // }).addTo(map).bindPopup("Hello");
 
         var iconOptions = {
             iconUrl: icon,
@@ -46,14 +32,6 @@ const Map = () => {
 
         var marker = window.L.marker([41.48169209345018, -71.31036492647061], markerOptions).addTo(map);
 
-
-
-        // var circle = window.L.circle([41.48169209345018, -71.31036492647061], {
-        //     color: 'orange',
-        //     // fillColor: '#f03',
-        //     fillOpacity: 0.5,
-        //     radius: 50
-        // }).addTo(map);
 
         return () => {
             console.log(map);

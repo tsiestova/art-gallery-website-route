@@ -18,7 +18,7 @@ const Promo = () => {
             <div className={promoStyles.logo__wrap__white_dark}>
               <LogoBlackAndWhite />
             </div>
-            
+
             <ResponsivePicture
                 path={"./assets/hero/image-hero.jpg"}
                 sizes={["1200", "768"]}
@@ -28,7 +28,6 @@ const Promo = () => {
             <div className={layoutStyles.layout}>
               <div className={promoStyles.logo__wrap__dark}>
                 <LogoDark />
-                {/*<LogoBlackAndWhite />*/}
               </div>
 
               <div className={promoStyles.text__block__wrap}>
@@ -39,7 +38,6 @@ const Promo = () => {
                 </div>
                 <div className={promoStyles.btn__wrap}>
                   <Link to="location">
-
                     <Button type="button"
                             iconRight={<Icon>
                               <img src={IconRight} alt="" />
@@ -47,16 +45,11 @@ const Promo = () => {
                     >
                       OUR LOCATION
                     </Button>
-
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          {/*<div className={promoStyles.logo__wrap}>*/}
-          {/*  /!*<LogoDark />*!/*/}
-          {/*  /!*<LogoBlackAndWhite />*!/*/}
-          {/*</div>*/}
         </div>
       </div>
 

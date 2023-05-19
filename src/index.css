@@ -1,3 +1,4 @@
-a:hover {
-    cursor: pointer;
+
+.leaflet-top {
+    top: 70px;
 }

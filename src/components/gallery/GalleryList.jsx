@@ -1,6 +1,5 @@
 import React from "react";
 import galleryStyles from "./gallery.module.scss";
-import layoutStyles from "../layout.module.scss";
 import ResponsivePicture from "../picture/ResponsivePicture";
 
 const GalleryList = () => {
@@ -45,7 +44,6 @@ const GalleryList = () => {
               sizes={["1200", "768"]}
             />
           </li>
-          {/*<li className={galleryStyles.gallery__item_pic}></li>*/}
           <li
             className={`${galleryStyles.gallery__item_text} ${galleryStyles.black} ${galleryStyles.gallery__item}`}
           >

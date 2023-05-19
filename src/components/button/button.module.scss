@@ -1,8 +1,6 @@
 @use "../../styles/abstracts/colors" as colors;
 @use "../../styles/abstracts/functions" as media;
 
-
-
 .btn {
   &:hover {
     cursor: pointer;
@@ -16,18 +14,14 @@ a {
 }
 
 .btn {
-
   display: flex;
   align-items: center;
-  /* max-width: 260px; */
-  /* width: 100%; */
   position: relative;
   height: 72px;
 
   &.back {
     flex-direction: row-reverse;
   }
-
 
   .btn__text {
     font-weight: 800;
@@ -44,32 +38,13 @@ a {
   }
 
   &.iconRight {
-    //&:hover {
-    //  @include media.tablet {
-    //    background-color: colors.$color1;
-    //  }
-    //}
 
     &:after {
       content: "";
       width: 56px;
       height: 100%;
-      //position: absolute;
-      //right: 0;
-      //top: 0;
       background:  colors.$color1 url(../../assets/icon-arrow-right.svg) no-repeat center center;
     }
-    //
-    //&:hover {
-    //  &:before {
-    //    background-color: colors.$color1;
-    //  }
-    //}
-    //&:hover {
-    //  &:before {
-    //    background-color: colors.$color1;
-    //  }
-    //}
   }
 
   &.iconLeft {
@@ -83,8 +58,7 @@ a {
       background:  colors.$color1 url(../../assets/icon-arrow-left.svg) no-repeat center center;
     }
   }
-  }
-
+}
 
 @mixin btn-back($bg) {
   &:before {

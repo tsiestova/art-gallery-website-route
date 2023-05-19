@@ -1,18 +1,18 @@
 import React from "react";
-import footerStyles from "./footer.module.scss";
-import LogoWhite from "../logo/LogoWhite";
+import footerStyles from "./foter-location.module.scss";
+import LogoDark from "../logo/LogoDark";
 
-const Footer = () => {
+const FooterLocation = () => {
 
   return (
     <footer
       className={
-        footerStyles.footer
+        `${footerStyles.footer} ${footerStyles.locationMode}`
       }
     >
       <div className={footerStyles.layout}>
         <div className={footerStyles.logo__wrap}>
-          <LogoWhite />
+          <LogoDark />
         </div>
         <div className={footerStyles.footer__description}>
           The Modern Art Gallery is free to all visitors and open seven days a
@@ -40,4 +40,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterLocation;

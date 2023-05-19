@@ -6,10 +6,6 @@
   display: block;
   position: relative;
   
-  @include media.desktop {
-    //display: none;
-  }
-
 
   img {
     width: 100%;

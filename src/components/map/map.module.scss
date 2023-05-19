@@ -3,9 +3,6 @@
 
 .map__wrap {
   height: 550px;
-  //background: grey;
-  //z-index: -1;
-
 }
 
 #map {
@@ -17,6 +14,6 @@
   @include typography.bodyS;
 }
 
-//.leaflet-tile {
-//  filter: hue-rotate(45deg) !important;
-//}
+.leaflet-top {
+  top: 70px;
+}

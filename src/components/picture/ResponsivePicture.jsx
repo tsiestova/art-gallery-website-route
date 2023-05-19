@@ -19,9 +19,6 @@ const getPath = (path, index) => {
       return getResponsivePath(fileName)
         .map((fileName) => `${filePath}/mobile/${fileName}`)
         .join(", ");
-    //   `${filePath}/mobile/${fileName}`,
-    //   `${filePath}/mobile/${fileName} 2x`,
-    // ].join(", ");
 
     case 1:
       return getResponsivePath(fileName)

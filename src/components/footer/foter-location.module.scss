@@ -1,3 +1,4 @@
+
 @use "../../styles/abstracts/colors" as colors;
 @use "../../styles/abstracts/typography" as typography;
 @use "../../styles/abstracts/functions"  as media;
@@ -6,14 +7,38 @@
   background: colors.$color2;
   padding: 48px 0 48px 0;
 
- @include media.tablet {
+  &.locationMode {
+    background: #D5966C;
+
+    .footer__description {
+      color: #151515;
+    }
+
+    .social__media__item {
+      a {
+        &:before {
+          background: #151515;
+        }
+        &:hover {
+          &:before {
+            background: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  @include media.tablet {
     padding-top: 55px;
   }
+
+
 
   .layout {
     padding: 0 32px;
 
-   @include media.tablet {
+    @include media.tablet {
       display: flex;
       padding: 0 39px;
       justify-content: space-between;
@@ -25,6 +50,7 @@
       margin: auto;
     }
   }
+
 }
 
 .logo__wrap {
@@ -32,9 +58,10 @@
   height: 40px;
   margin-bottom: 38px;
 
- @include media.tablet {
+  @include media.tablet {
     width: 110px;
     height: auto;
+    //flex: 0.5;
   }
 
   @include media.desktop {
@@ -54,7 +81,7 @@
   color:  colors.$color4;
   margin-bottom: 38px;
 
- @include media.tablet {
+  @include media.tablet {
     font-weight: 300;
     font-size: 16px;
     line-height: 26px;
@@ -71,7 +98,7 @@
   align-items: center;
   gap: 20px;
 
- @include media.tablet {
+  @include media.tablet {
     justify-content: end;
   }
 }
